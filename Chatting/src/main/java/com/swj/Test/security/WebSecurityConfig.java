@@ -28,8 +28,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter { // 2
   
   @Override
   protected void configure(HttpSecurity http) throws Exception { // 5
-    http.authorizeRequests().anyRequest().permitAll();
-    /*
+    http
+    
           .authorizeRequests() // 6
             .antMatchers("/login", "/user").permitAll()
             .antMatchers(HttpMethod.POST, "/signup").permitAll()// 누구나 접근 허용
